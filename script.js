@@ -30,7 +30,8 @@ const showAdvice = () => {
 }
 
 const showOptions = () => {
-  alert(options.join('---'))
+
+  options.length ? alert(options.join(' --- ')) : alert('No options available, add options first')
 }
 
 addAdviceBtn.addEventListener('click', addAdviceToList);
