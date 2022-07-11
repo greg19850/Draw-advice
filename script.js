@@ -1,6 +1,8 @@
 const addAdviceBtn = document.querySelector('.addAdvice');
 const resetBtn = document.querySelector('.reset');
 const input = document.querySelector('input');
+const showAdviceBtn = document.querySelector('.showAdvice');
+const optionsBtn = document.querySelector('.showOptions');
 
 const options = [];
 
@@ -17,6 +19,15 @@ const resetList = () => {
   options = [];
 }
 
+const showAdvice = () => {
+
+}
+
+const showOptions = () => {
+
+}
 
 addAdviceBtn.addEventListener('click', addAdviceToList);
 resetBtn.addEventListener('click', resetList);
+showAdviceBtn.addEventListener('click', showAdvice);
+optionsBtn.addEventListener('click', showOptions);
