@@ -30,7 +30,7 @@ const showAdvice = () => {
 }
 
 const showOptions = () => {
-
+  alert(options.join('---'))
 }
 
 addAdviceBtn.addEventListener('click', addAdviceToList);
