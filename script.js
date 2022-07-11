@@ -5,7 +5,7 @@ const showAdviceBtn = document.querySelector('.showAdvice');
 const optionsBtn = document.querySelector('.showOptions');
 const answer = document.querySelector('.answer');
 
-let options = [];
+const options = [];
 
 const addAdviceToList = (e) => {
   e.preventDefault()
@@ -13,14 +13,14 @@ const addAdviceToList = (e) => {
 
   if (adviceText.length) {
     options.push(adviceText);
-    input.value = '';
     alert(`${adviceText} added to advice options!!`)
+    input.value = '';
   }
 };
 
 const resetList = (e) => {
   e.preventDefault();
-  options = [];
+  options.length = 0;
   answer.textContent = ''
 }
 
