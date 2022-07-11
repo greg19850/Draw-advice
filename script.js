@@ -3,24 +3,30 @@ const resetBtn = document.querySelector('.reset');
 const input = document.querySelector('input');
 const showAdviceBtn = document.querySelector('.showAdvice');
 const optionsBtn = document.querySelector('.showOptions');
+const answer = document.querySelector('.answer');
 
-const options = [];
+let options = [];
 
 const addAdviceToList = (e) => {
   e.preventDefault()
-
   let adviceText = input.value;
-  options.push(adviceText);
-  input.value = '';
-  alert(`${adviceText} added to advice options!!`)
+
+  if (adviceText.length) {
+    options.push(adviceText);
+    input.value = '';
+    alert(`${adviceText} added to advice options!!`)
+  }
 };
 
-const resetList = () => {
+const resetList = (e) => {
+  e.preventDefault();
   options = [];
+  answer.textContent = ''
 }
 
 const showAdvice = () => {
-
+  let answerIndex = Math.floor(Math.random() * options.length);
+  answer.textContent = options[answerIndex]
 }
 
 const showOptions = () => {
