@@ -11,7 +11,12 @@ const addAdviceToList = (e) => {
   options.push(adviceText);
   input.value = '';
   alert(`${adviceText} added to advice options!!`)
+};
+
+const resetList = () => {
+  options = [];
 }
 
 
-addAdviceBtn.addEventListener('click', addAdviceToList)
+addAdviceBtn.addEventListener('click', addAdviceToList);
+resetBtn.addEventListener('click', resetList);
